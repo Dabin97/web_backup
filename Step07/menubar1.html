@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style-type: none;
+            width: 1000px;
+            margin: 50px auto;
+            font-size: 0px; /*띄어쓰기를 0px로 바꿈*/
+        }
+        li{
+            display: inline-block; 
+            background-color: #dad5d5;
+            font-size: 20px;
+            line-height: 20px;
+            padding: 20px 0px;
+        }
+        a{
+            width: 150px;
+            display: inline-block; 
+            text-align: center;
+            color: black;
+            text-decoration: none;
+        }
+        .first{
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        .last{
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="first"><a href="#">HOME</a></li>  <!-- 글자들 사이에 엔터가 들어가서 띄어쓰기 취급받음. 그래서 단어사이의 블록이 떨어져있음-->
+        <li>|</li><li><a href="#">회사소개</a></li> <!--엔터로 문제가 생긴것이기 때문에 <li>와 <li> 사이의 엔터를 지우고 다 붙여버려도 된다.-->
+        <li>|</li>
+        <li><a href="#">브로슈어</a></li>
+        <li>|</li>
+        <li><a href="#">QnA</a></li>
+        <li>|</li>
+        <li class="last"><a href="#">오시는길</a></li>
+    </ul>
+</body>
+</html>

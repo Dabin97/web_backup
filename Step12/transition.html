@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            border:5px solid black;
+            transition-duration: 1s; /*속도*/
+            transition-property: all;
+            transition-delay: 1s;
+        }
+        .box1:hover{
+            background-color: cadetblue;
+            border: 5px double greenyellow;
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            border:5px solid black;
+            box-sizing: border-box;
+            transition: all 1s;    /*한번에 쓸수있다*/ /*모든 css 속성이 다 트렌지션 되지않는다.*/
+        }
+        .box2:hover{
+            border-radius: 100px;
+            background-color: violet;
+            border: 5px dashed orangered;
+        }
+        button{
+            position: absolute;     /*position: relative; 하고 밑에서 top,left로 하면 트렌지션이 적용되지않는다.*/
+            transition: all 2s;
+            
+        }
+        button:hover{
+            margin-top: 150px;
+            margin-left: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>    
+    <div class="box2"></div>
+    <button>회원탈퇴</button>
+</body>
+</html>

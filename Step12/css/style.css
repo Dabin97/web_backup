@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 1200px;
+    height: 300px;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+/*여기다가는 style태그를 쓰면 안된다.*/

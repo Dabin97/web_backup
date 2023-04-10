@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            height: 100px;
+            background-color: rgb(214, 212, 212);
+            display: inline-block;
+        }
+        .header_container{
+            width: 1200px;
+            height: 465px;
+            margin: 0 auto;   /*header에 css를 넣지않고 header_container에 flex를 사용하면 더 간편하다*/
+        }
+        #login{
+            width: 48px;  /*여기다가 백그라운드 이미지로 넣어서하면 편하다*/
+            height: 48px;
+            float: left;
+        }
+        .header_1{
+            width: 250px;
+            padding: 10px;
+            float: right;
+        }
+        header a:link {
+            color:black;
+            display: inline-block;
+            text-decoration: none;
+        }
+        .left{
+            background-color: rgba(255, 255, 255, 0.5);
+            width: 48px;
+            height: 48px;
+            background-image: url(/Step02/img/icon2.png);
+            background-position: -10px -8px;
+            position: relative;
+            bottom: 250px;
+            border:none; 
+        }
+        .right{
+            background-color: rgba(255, 255, 255, 0.5);
+            width: 48px;
+            height: 48px;
+            background-image: url(/Step02/img/icon2.png);
+            background-position: -70px -10px;
+            position: relative;
+            bottom: 250px;
+            left: 1098px;
+            border:none;
+        }
+        nav{
+            width: 1200px;
+            margin: 0 auto;
+            background-color: rgb(214, 212, 212);
+            text-align: center;
+        }
+        nav ul{
+            list-style-type: none;
+            display: flex;          /*이것을 안넣으면 아래 css가 안먹힌다*/
+            flex-flow: row nowrap;
+            justify-content: center;
+            
+        }
+        nav li a:link, nav li a:visited{
+            color:black;
+            display: inline-block;
+            width: 200px;
+            padding:20px 0px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        /* nav li a:hover{
+            background-color: #b6b6b6;
+        } 내가 만든곳에다 hover를 넣으면 색이 삐져나간다. 아마 hight값을 임의로 설정해서 그런듯*/
+
+        section{
+            width: 1200px;
+            margin: 0 auto;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+        }
+        table{
+            width: 500px;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        th,td{
+            text-align: center;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-top: 1px solid rgb(228, 227, 227);
+            border-bottom: 1px solid rgb(228, 227, 227);
+        }
+        caption{
+            padding-bottom:10px
+        }
+        footer{
+            width: 1200px;
+            margin: 0 auto;
+            background-color: rgb(214, 212, 212);
+            /* display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start; 이거 없어도 작동한다*/
+            padding: 20px 10px;
+        }
+        footer ul{
+            list-style-type: none;
+            margin-left: 20px;
+        }
+        footer li{
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header_container">
+    <header>
+        <div class="header_1">
+            <img src="/Step02/img/login.png" id="login"> <!--그냥 div박스를 넣고 class로 background-image로 넣어주면 된다-->
+            <p>OOO님 로그인 하셨습니다</p>
+            <a href="#">로그아웃</a> |
+            <a href="#">정보수정</a>
+        </div>
+        <div class="main">
+            <img src="/Step02/img/main_4.jpg" id="main">
+            <button class="left"></button>
+            <button class="right"></button>
+        </div>
+    </header>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="">HOME</a></li>
+                <li><a href="">예약</a></li>
+                <li><a href="">펜션 스토리</a></li>
+                <li><a href="">펜션 소개</a></li>
+                <li><a href="">오시는 길</a></li>
+        </ul>
+    </nav>
+    <section>
+            <table>
+                <caption><h1>공지사항</h1></caption>
+                <tr>
+                    <th>글번호</th>
+                    <th>제목</th>
+                    <th>작성일</th>
+                    <th>조회수</th>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>제목1</td>
+                    <td>2021-07-26</td>
+                    <td>33</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>제목2</td>
+                    <td>2021-07-25</td>
+                    <td>543</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>제목3</td>
+                    <td>2021-07-23</td>
+                    <td>331</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>제목4</td>
+                    <td>2021-07-22</td>
+                    <td>33</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>제목5</td>
+                    <td>2021-07-21</td>
+                    <td>13</td>
+                </tr>
+            </table>
+            <table>
+            <caption><h1>이벤트</h1></caption>
+            <tr>
+                <th>글번호</th>
+                <th>제목</th>
+                <th>작성일</th>
+                <th>조회수</th>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>제목1</td>
+                <td>2021-07-26</td>
+                <td>33</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>제목2</td>
+                <td>2021-07-25</td>
+                <td>543</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>제목3</td>
+                <td>2021-07-23</td>
+                <td>331</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>제목4</td>
+                <td>2021-07-22</td>
+                <td>33</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>제목5</td>
+                <td>2021-07-21</td>
+                <td>13</td>
+            </tr>
+        </table>
+    </section>
+    <footer>
+        <ul>
+            <li>OOOO 펜션</li>
+            <li>대표자 : OOO</li>
+            <li>연락처 : OOO-OOOO-OOOO</li>
+            <li>주소 : 강원도 평창시 OOOOOOO</li>
+        </ul>
+    </footer>
+</body>
+</html>

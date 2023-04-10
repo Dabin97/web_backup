@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 예제</title>
+</head>
+<style>
+    table{
+        border-collapse: collapse;
+    }
+    td{
+        padding:20px;
+        font-size: 24px;
+    }
+</style>
+<body>
+    <h2>3행 4열짜리 테이블</h2>
+    <table border="1">  <!--표 영역 잡아주는 태그-->
+        <tr> <!--행-->
+            <td>1</td> <!--열-->
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>5</td> <td>6</td><td>7</td><td>8</td>
+        </tr>
+        <tr>
+            <td>9</td><td>10</td><td>11</td><td>12</td>
+        </tr>
+    </table>
+ <!-- 셀별로 따로 넓이와 높이를 바꿀수는 없고 일괄처리된다. -->
+ <h2>5행 5열짜리 테이블</h2>
+    <table border="1"> 
+        <tr> 
+            <td colspan="3">1</td> <!--가로로 3칸짜리 셀로 만듦. 그러나 밑에 삐져나옴, 4,5 없애니까 삐져나온거 사라짐-->
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td rowspan="2">6</td> <!--세로로 2칸짜리 셀을 만듦(span : 영역)-->
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+        </tr>
+        <tr>
+            <td colspan="2" rowspan="2">16</td><!--가로2칸, 세로2칸짜리로 생성-->
+            <td>17</td> 
+            <td>21</td>
+            <td>21</td>
+            
+        </tr>
+        <tr>
+            <td>21</td>
+            <td>22</td>
+            <td>21</td>
+        </tr>
+    </table>
+</body>
+</html>

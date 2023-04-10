@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex_layout2</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            width: 1200px;
+            margin: 0 auto;
+            background-color: rgb(190, 189, 189);
+            text-align: center;
+            padding: 20px 0;
+        }
+        nav{
+            width: 1200px;
+            margin: 0 auto;
+            background-color: green;
+        }
+        nav ul{
+            list-style-type: none;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+        }
+        a:link,a:visited{
+            color:black;
+            display: inline-block;
+            width: 200px;
+            padding:20px 0px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        section{
+            width: 1200px;
+            margin: 0 auto;
+            padding: 10px 0;
+        }
+        .article_flex{
+            display: flex;
+            flex-flow:row nowrap;
+            margin-left: 30px;
+            padding-left: 10px;
+        }
+        .item{
+            margin-left: 10px;
+        }
+        .item img{
+            width: 100%;
+        }
+
+        footer{
+            width: 1200px;
+            margin: 0 auto;
+            background-color: rgb(214, 212, 212);
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            padding: 20px 0;
+        }
+        footer ul{
+            list-style-type: none;
+            margin-left: 20px;
+        }
+       
+    </style>
+</head>
+<body>
+    <header>
+            <h1>Header</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#">메뉴1</a></li>
+                <li><a href="#">메뉴2</a></li>
+                <li><a href="#">메뉴3</a></li>
+                <li><a href="#">메뉴4</a></li>
+                <li><a href="#">메뉴5</a></li>
+            </ul>
+        </nav>
+        <section>
+            <article>
+                <h2>article 제목</h2>
+                <div class="article_flex">
+                    <div class="item">
+                        <img src="/Step02/img/galaxy.jpg" alt="썸네일 이미지">
+                        <h3>썸네일 제목</h3>
+                        <p>썸네일 내용</p>
+                    </div>
+                    <div class="item">
+                        <img src="/Step02/img/galaxy.jpg" alt="썸네일 이미지">
+                        <h3>썸네일 제목</h3>
+                        <p>썸네일 내용</p>
+                    </div>
+                    <div class="item">
+                        <img src="/Step02/img/galaxy.jpg" alt="썸네일 이미지">
+                        <h3>썸네일 제목</h3>
+                        <p>썸네일 내용</p>
+                    </div>
+                    <div class="item">
+                        <img src="/Step02/img/galaxy.jpg" alt="썸네일 이미지">
+                        <h3>썸네일 제목</h3>
+                        <p>썸네일 내용</p>
+                    </div>
+                    <div class="item">
+                        <img src="/Step02/img/galaxy.jpg" alt="썸네일 이미지">
+                        <h3>썸네일 제목</h3>
+                        <p>썸네일 내용</p>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <h2>article 제목</h2>
+                <div class="article_flex">
+                    <div class="item">
+                        <img src="/Step02/img/galaxy.jpg" alt="썸네일 이미지">
+                        <h3>썸네일 제목</h3>
+                        <p>썸네일 내용</p>
+                    </div>
+                    <div class="item">
+                        <img src="/Step02/img/galaxy.jpg" alt="썸네일 이미지">
+                        <h3>썸네일 제목</h3>
+                        <p>썸네일 내용</p>
+                    </div>
+                    <div class="item">
+                        <img src="/Step02/img/galaxy.jpg" alt="썸네일 이미지">
+                        <h3>썸네일 제목</h3>
+                        <p>썸네일 내용</p>
+                    </div>
+                    <div class="item">
+                        <img src="/Step02/img/galaxy.jpg" alt="썸네일 이미지">
+                        <h3>썸네일 제목</h3>
+                        <p>썸네일 내용</p>
+                    </div>
+                    <div class="item">
+                        <img src="/Step02/img/galaxy.jpg" alt="썸네일 이미지">
+                        <h3>썸네일 제목</h3>
+                        <p>썸네일 내용</p>
+                    </div>
+                </div>
+            </article>
+            
+        </section>
+        <footer>
+            <div class="company">
+                <ul>
+                    <li>회사명 : OOOO</li>
+                    <li>대표 : OOO</li>
+                    <li>사업자번호 : OOO-OOOO-OOOOO</li>
+                    <li>통신판매업신고번호 : OOO-OOOO-OOOOO</li>
+                </ul>
+            </div>
+            <div class="call">
+                <ul>
+                    <li>고객 센터 연락처 : OO-OOOO-OOOO</li>
+                    <li>담당자 이메일 : test@gmail.com</li>
+                </ul>
+            </div>
+        </footer>
+</body>
+</html>

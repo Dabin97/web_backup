@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아이콘 적용</title>
+    <style>
+        div{
+            width: 48px;
+            height: 48px;
+            border: 1px dashed black;
+        }
+        .facebook{
+            background-image: url(/Step02/img/icon.png);
+            background-position: 0px 0px; /*페이스북 아이콘이 맨왼쪽에 있기때문에 0,0*/
+        }
+        .reddit{
+            background-image: url(/Step02/img/icon.png);
+            background-position: -48px  -48px; /*음수로 위치 선정*/
+        }
+        .googleplus{
+            background-image: url(/Step02/img/icon.png);
+            background-position: -96px  -48px; /* 옆으로 2칸 = -96px, 아래로 1칸 = -48px */
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        div 태그로 가로세로 길이가 48px인 박스를 하나 작성
+        테두리 상하좌우 동일한 크기로 적용 색상, 두께 자유롭게
+     -->
+     <div class="facebook"></div>
+     <div class="reddit"></div>
+     <div class="googleplus"></div>
+</body>
+</html>

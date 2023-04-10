@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>체크박스2</title>
+    <style>
+    /* 체크박스(라디오버튼)가 체크된 상태 , #id로 지정해서 사용, +label--> 그 줄에 있는 label 태그에 적용, 커스텀된 체크박스를 만들때 사용*/
+
+    input{
+        display: none; /*라디오 숨기기*/
+    }
+    label{
+        width: 150px; 
+        display: inline-block;
+        position: relative;
+        line-height: 16px;
+        padding-left: 20px  ;
+    }
+    .radio{
+        display: inline-block;
+        box-sizing: border-box;
+        width: 16px;
+        height: 16px;
+        border: 2px solid orangered;
+        border-radius: 8px;
+        padding: 3px;
+        position: relative;
+        top: 1px;
+        left: -10px; /*왼쪽으로 땡기기*/
+    }
+ 
+    input:checked+label > .radio{
+        background-color: orange;
+        background-clip: content-box;
+    }
+    </style>
+</head>
+<body>
+    <input type="radio" name="items" id="chk1" checked><label for="chk1"><span class="radio"></span>항목1</label><br>
+    <input type="radio" name="items" id="chk2"><label for="chk2"><span class="radio"></span>항목2</label><br>
+    <input type="radio" name="items" id="chk3"><label for="chk3"><span class="radio"></span>항목3</label><br>
+    <input type="radio" name="items" id="chk4"><label for="chk4"><span class="radio"></span>항목4</label><br>
+    <input type="radio" name="items" id="chk5"><label for="chk5"><span class="radio"></span>항목5</label><br>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>em, rem</title>
+    <style>
+        /* 
+            em : 부모 태그에 적용된 글꼴 크기 기준
+            rem : 최상위 부모태그(html)에 적용된 글꼴 크기 기준
+        */
+        .container{
+            font-size: 20px;
+        }
+        .first{
+            font-size: 2rem; /* 2rem = 32px / html에 들어있는 폰트크기(16px)를 기준으로 2배한것이다. 그래서 32px*/
+        }
+        .second{
+            font-size: 2em;  /* rem보다 em이 크기가 더 크다. / second를 감싸고있는 container의 폰트가 20px이므로 2em = 40px이다 */ 
+        }
+        .px32{
+            font-size: 32px; 
+        }
+        html{
+            font-size: 20px; /* html의 크기를 20px로 바꾸니까 2em과 같아짐. rem은 최상위루트(root)를 기준으로 잡는다. */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="first">글꼴 크기 rem 단위</p>
+        <p class="second">글꼴 크기 em 단위</p>
+    </div>
+    <p>기본 글꼴</p>
+    <p class="px32">32px 글꼴</p>
+</body>
+</html>

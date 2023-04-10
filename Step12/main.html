@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .flex_container {
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .member_bar {
+            background-color: rgb(214, 212, 212); /*header가 아니라 그 안의 div클래스에 배경색을 넣는다 */
+            padding-right: 50px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+
+        .profile {
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+            background-image: url('img/icon.png');
+            background-repeat: no-repeat;
+            background-position: -96px 0px;
+        }
+
+        .info {
+            line-height: 24px;
+            padding-left: 5px;
+        }
+
+        .ad_img {
+            position: relative;
+            font-size: 0px;
+        }
+        .ad_img button{
+            width: 48px;
+            height: 48px;
+            position: absolute; /*이미지 div에는 position: relative;을 넣고, 이미지 버튼에는 position: absolute;를 넣어 그 위에 나오도록 한다*/
+            border:none;        /*크롬 정책상 버튼에 border가 생기기때문에 none으로 없애준다*/
+            background-color:  rgba(255, 255, 255, 0.502);  /* 오퍼레이트는 전체 투명도 적용 / rgba는 배경색에만 적용 */
+        }
+        .left_arrow {
+            background-image: url('img/icon.png');
+            background-repeat: no-repeat; /*no-repeat으로 잡아주면 반복되지않는다*/
+            top : calc(50% - 24px);  /*반절에서 중앙을 차지하도록 48px의 반절인 24px을 빼준다*/
+            left: 0px;               /*position: absolute;를 한뒤 left: 0px;를 하면 이미지 왼쪽에 바싹 붙는다*/
+        }
+        .right_arrow {
+            background-image: url('img/icon.png');
+            background-position: -48px;  
+            background-repeat: no-repeat;
+            top : calc(50% - 24px);
+            right: 0px;
+        }
+        nav{
+            background-color: rgb(214, 212, 212);
+        }
+        nav ul{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            list-style-type: none;
+        }
+        nav li a:link,nav li a:visited{  /*nav안에 있는 li에만 적용한다는 뜻*/
+            color : black;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 1.3em;
+            display: inline-block;
+            width: 200px;
+            padding:20px 0px;
+            text-align: center;
+        }
+        nav li a:hover{
+            background-color: #b6b6b6;  /*마우스를 가져다댔을때 칸 색이 변하도록 한다.*/
+        }
+        section{
+            margin-top: 20px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-evenly;
+        }
+        section h2{  /*h2도 괜찮고 caption으로 해도 될듯*/
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        section table{
+            width: 400px;
+            border-collapse: collapse;
+        }
+        section table th,section table td{  /*선택자를 넣어서 css를 넣는것이 좋다*/
+            border-top: 1px solid rgb(228, 227, 227);
+            border-bottom: 1px solid rgb(228, 227, 227);
+            padding: 10px 20px;
+            text-align: center;
+        }
+        footer{
+            background-color: rgb(214, 212, 212);
+            padding: 20px 50px;
+            margin-top: 20px;
+        }
+        footer ul{
+            list-style-type: none;
+        }
+        footer ul li{
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="flex_container">
+        <header>
+            <div class="member_bar">
+                <div><a href="" class="profile"></a></div>
+                <div class="info">
+                    OOO님 로그인 하셨습니다.
+                    <br>
+                    로그아웃 | 정보수정
+                </div>
+            </div>
+            <div class="ad_img">
+                <button class="left_arrow"></button>
+                <button class="right_arrow"></button>
+                <img src="img/main_4.jpg">
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="main.html">HOME</a></li>
+                <li><a href="sub_page2.html">예약</a></li>
+                <li><a href="">펜션 스토리</a></li>
+                <li><a href="">펜션 소개</a></li>
+                <li><a href="sub_page.html">오시는 길</a></li>
+            </ul>
+        </nav>
+        <section>
+            <article>  <!--article안에 table을 넣는다. 나는 그냥 table만 했음-->
+                <h2>공지사항</h2>
+                <table>
+                    <tr>
+                        <th>글번호</th>
+                        <th>제목</th>
+                        <th>작성일</th>
+                        <th>조회수</th>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>제목1</td>
+                        <td>2021-07-26</td>
+                        <td>33</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>제목2</td>
+                        <td>2021-07-25</td>
+                        <td>543</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>제목3</td>
+                        <td>2021-07-23</td>
+                        <td>331</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>제목4</td>
+                        <td>2021-07-22</td>
+                        <td>33</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>제목5</td>
+                        <td>2021-07-21</td>
+                        <td>13</td>
+                    </tr>
+                </table>
+            </article>
+            <article>
+                <h2>이벤트</h2>
+                <table>
+                    <tr>
+                        <th>글번호</th>
+                        <th>제목</th>
+                        <th>작성일</th>
+                        <th>조회수</th>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>제목1</td>
+                        <td>2021-07-26</td>
+                        <td>33</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>제목2</td>
+                        <td>2021-07-25</td>
+                        <td>543</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>제목3</td>
+                        <td>2021-07-23</td>
+                        <td>331</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>제목4</td>
+                        <td>2021-07-22</td>
+                        <td>33</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>제목5</td>
+                        <td>2021-07-21</td>
+                        <td>13</td>
+                    </tr>
+                </table>
+            </article>
+        </section>
+        <footer>
+            <ul>
+                <li>OOOO 펜션</li>
+                <li>대표자 : OOO</li>
+                <li>연락처 : 010-0000-0000</li>
+                <li>주소 : 강원도 평창시 OOOOOOO</li>
+            </ul>
+        </footer>
+
+    </div>
+</body>
+
+</html>

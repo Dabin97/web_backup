@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 3000px;
+        }
+        .flex_container {
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .member_bar {
+            background-color: rgb(214, 212, 212);
+            padding-right: 50px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+
+        .profile {
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+            background-image: url('img/icon.png');
+            background-repeat: no-repeat;
+            background-position: -96px 0px;
+        }
+
+        .info {
+            line-height: 24px;
+            padding-left: 5px;
+        }
+
+        .ad_img {
+            position: relative;
+            font-size: 0px;
+        }
+        .ad_img button{
+            width: 48px;
+            height: 48px;
+            position: absolute;
+            border:none;
+            background-color:  rgba(255, 255, 255, 0.502);
+        }
+        .left_arrow {
+            background-image: url('img/icon.png');
+            background-repeat: no-repeat;
+            top : calc(50% - 24px);
+            left: 0px;
+        }
+        .right_arrow {
+            background-image: url('img/icon.png');
+            background-position: -48px;
+            background-repeat: no-repeat;
+            top : calc(50% - 24px);
+            right: 0px;
+        }
+        nav{
+            background-color: rgb(214, 212, 212);
+        }
+        nav ul{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            list-style-type: none;
+        }
+        nav li a:link,nav li a:visited{
+            color : black;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 1.3em;
+            display: inline-block;
+            width: 200px;
+            padding:20px 0px;
+            text-align: center;
+        }
+        nav li a:hover{
+            background-color: #b6b6b6;
+        }
+        section{
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        article{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-evenly;
+            padding: 0px 30px;
+        }
+        section img{
+            width: 700px;
+            margin-right: 20px;
+        }
+        article ul{
+            list-style-type: none;
+        }
+        
+        footer{
+            background-color: rgb(214, 212, 212);
+            padding: 20px 50px;
+            margin-top: 20px;
+        }
+        footer ul{
+            list-style-type: none;
+        }
+        footer ul li{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex_container">
+        <header>
+            <div class="member_bar">
+                <div><a href="" class="profile"></a></div>
+                <div class="info">
+                    OOO님 로그인 하셨습니다.
+                    <br>
+                    로그아웃 | 정보수정
+                </div>
+            </div>
+            <div class="ad_img">
+                <button class="left_arrow"></button>
+                <button class="right_arrow"></button>
+                <img src="img/main_4.jpg">
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="main.html">HOME</a></li>
+                <li><a href="sub_page2.html">예약</a></li>
+                <li><a href="">펜션 스토리</a></li>
+                <li><a href="">펜션 소개</a></li>
+                <li><a href="sub_page.html">오시는 길</a></li>
+            </ul>
+        </nav>
+        <section>
+            <article>
+                <img src="img/map.png" alt="">
+                <div class="content">
+                <h2>오시는 길</h2>
+                <ul>
+                    <li>정부는 회계연도마다 예산안을 편성하여 회계연도 개시 90일전까지 국회에 제출하고, 국회는 회계연도 개시 30일전까지 이를 의결하여야 한다.</li>
+                    <li>농업생산성의 제고와 농지의 합리적인 이용을 위하거나 불가피한 사정으로 발생하는 농지의 임대차와 위탁경영은 법률이 정하는 바에 의하여 인정된다.</li>
+                    <li>공공필요에 의한 재산권의 수용·사용 또는 제한 및 그에 대한 보상은 법률로써 하되, 정당한 보상을 지급하여야 한다.</li>
+                </ul>
+                </div>
+            </article>
+        </section>
+        <footer>
+            <ul>
+                <li>OOOO 펜션</li>
+                <li>대표자 : OOO</li>
+                <li>연락처 : 010-0000-0000</li>
+                <li>주소 : 강원도 평창시 OOOOOOO</li>
+            </ul>
+        </footer>
+    </div>
+</body>
+
+</html>

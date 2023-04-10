@@ -1,0 +1,28 @@
+CSS(Cascading Style Sheets)
+    html 문서에서 디자인 부분을 담당하는 부분
+
+    선택자(selector) : 디자인을 적용할 태그를 선택하는 방법
+
+    폰트 - 크기, 글꼴, bold, italic, underline, 색상
+    박스모델링 - 배경, 테두리, 여백(margin, padding), 그림자, 가로세로 길이
+    레이아웃 - 박스모델링, display, float, position, grid, flex
+    애니메이션
+    미디어쿼리 
+    반응형웹
+    (미디어쿼리랑 반응형웹은 함께 배운다.)(미디어쿼리, 화면 사이즈에 따라 디자인을 바꾸는것 = 반응형웹)
+
+    Style : 그냥 태그는 앞에 아무것도 붙이지 않는다. li {   }
+            클래스는 점(.)을 붙인다.  .under {  }
+            id값은 앞에 #을 붙인다. #italic{    }
+
+텍스트 라인 긋기 : underlin, overline, line-through, none
+선 종류 : dotted dashed solid double wavy
+text-decoration : 선위치 선종류 선색깔;
+
+상하좌우 동일한 디자인 적용시
+border : 선두께 선종류 색상; 
+선종류 : solid dashed dotted double inset outset  
+border-radius: 20px; /*모서리 둥글게*/
+
+column : 세로
+row : 가로

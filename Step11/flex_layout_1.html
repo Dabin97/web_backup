@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex_layout</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .flex_container{
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        header{
+            border: 1px solid black;
+            padding: 20px 0;
+        }
+        nav{
+            border: 1px solid black;
+        }
+        nav ul{
+            list-style-type: none ;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        a{
+            color:black;
+            display: inline-block;
+            width: 200px;
+            padding:10px 0px;
+            text-align: center;
+            text-decoration: none;
+        }
+        .main_container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;  /*nowrap을 container에 넣는다.*/
+            border: 1px solid black;
+        }
+        section{
+            width: 900px;
+            border: 1px solid black;
+            display: flex;
+            flex-flow: row wrap; /*section에 또다른 flex, 그안에 wrap*/
+        }
+        section > h2{
+            width: 100%;
+            padding: 20px 0;
+        }
+        article{
+            width: calc(100% / 3);
+            height: 300px;
+            border: 1px solid black;
+            box-sizing: border-box; /*wrap의 특성상 테두리를 인식해서 줄바꿈했기떄문에 border-box 해줘야한다.*/
+        }
+        aside{
+            border: 1px solid black;
+            width: 300px;
+        }
+        
+        footer{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            border: 1px solid black; 
+            padding: 40px 0;
+        }
+        .logo, .company{
+            border: 1px solid black;
+            width: 200px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex_container">
+        <header>
+            <h1>헤더영역</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#">메뉴1</a></li>
+                <li><a href="#">메뉴2</a></li>
+                <li><a href="#">메뉴3</a></li>
+                <li><a href="#">메뉴4</a></li>
+                <li><a href="#">메뉴5</a></li>
+            </ul>
+        </nav>
+        <div class="main_container">
+        <section>
+            <h2>섹션 제목 영역</h2>
+                <article>
+                    <h3>article 제목</h3>
+                    <p>내용</p>
+                </article>
+                <article>
+                    <h3>article 제목</h3>
+                    <p>내용</p>
+                </article>
+                <article>
+                    <h3>article 제목</h3>
+                    <p>내용</p>
+                </article>
+                <article>
+                    <h3>article 제목</h3>
+                    <p>내용</p>
+                </article>
+                <article>
+                    <h3>article 제목</h3>
+                    <p>내용</p>
+                </article>
+                <article>
+                    <h3>article 제목</h3>
+                    <p>내용</p>
+                </article>
+        </section>
+        <aside>
+            <h2>aside 제목</h2>
+        </aside>
+        </div>
+        <footer>
+            <div class="logo"></div>
+            <div class="company"></div>
+        </footer>
+    </div>
+</body>
+</html>

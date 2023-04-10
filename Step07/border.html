@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테두리</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+        }
+        /* 
+            상하좌우 동일한 디자인 적용시
+            border : 선두께 선종류 색상; 
+            선종류 : solid dashed dotted double inset outset    
+        */
+        .border1{
+            /* border: 20px inset coral; */
+            border-width: 20px;
+            border-style: solid;
+            border-color: coral; /*일반적으론 border에 한번에 넣어서 쓰지, 이렇게 쪼개서 쓰지는 않는다.*/
+        }
+        .border2{
+            /* border-bottom: 5px solid yellowgreen; */
+            border-bottom-width: 20px;
+            border-bottom-style: solid;
+            border-bottom-color: yellowgreen;
+        }
+        .border3{
+            border: 5px solid coral;
+            border-radius: 20px; /*모서리 둥글게*/
+        }
+        .border4{
+            width: 300px;
+            height: 50px;
+            border: 1px solid blue;
+            border-radius: 25px; /* height: 50px;의 절반이기때문에 끝이 둥근형태가 된다. */
+        }
+        .border5{
+            width: 300px;
+            height: 300px;
+            border: 10px solid coral;
+            border-radius: 160px; /* 가로세로의 절반값 150px로 하면 원이 나온다. 160px로 하면 더 원같아진다. 크기를 잡을때 테두리까지 잡아줘야한다 */
+        }
+        .border6{
+            width: 300px;
+            height: 300px;
+            border: 1px solid cornflowerblue;
+            border-top-left-radius: 20px;  /* 위치를 지정해서 둥글게 만들수있다. */
+            border-top-right-radius: 40px;
+            border-bottom-left-radius: 60px;
+            border-bottom-right-radius: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="border1"></div>
+    <hr>
+    <div class="border2"></div>
+    <hr>
+    <div class="border3"></div>
+    <hr>
+    <div class="border4"></div>
+    <hr>
+    <div class="border5"></div>
+    <hr>
+    <div class="border6"></div>
+</body>
+</html>
+
+
+
+
+
+
+

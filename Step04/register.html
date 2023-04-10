@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 페이지</title>
+    <style>
+        *{
+          margin:0;
+          padding:0;
+        }
+        h1{
+          text-align : center;
+          margin:20px 0;
+        }
+        table{
+          border-collapse:collapse;
+          margin:0 auto;
+          border:none;
+        }
+        td{
+          padding: 10px;
+          font-size:18px;
+          border:none;
+        }
+        input{
+          width:300px;
+          font-size:18px;
+          padding : 5px 10px;
+        }
+        textarea{
+          width:100%;
+          padding: 10px;
+          height : 300px;
+          box-sizing : border-box;
+          resize:none;
+        }
+        button{
+          width:150px;
+          padding:10px 0px;
+        }
+        select{
+          font-size:18px;
+          padding : 5px 10px;
+        }
+        input[name*='tel']{
+          width:100px;
+          text-align:center;
+        }
+        input[type='checkbox'],input[type='radio']{
+          width:16px;
+          margin-left:20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>회원가입 페이지</h1>
+    <form action="">
+    <table>
+        <tbody>
+        <tr>
+            <td>아이디</td>
+            <td><input type="text" placeholder="아이디를 입력하세요"></td> <!--required 생략가능-->
+        </tr>
+        <tr>
+            <td>암호</td>
+            <td><input type="password" placeholder="암호를 입력하세요"></td>
+        </tr>
+        <tr>
+            <td>암호확인</td>
+            <td><input type="password" placeholder="암호를 한번더 입력하세요"></td>
+        </tr>
+        <tr>
+            <td>이름</td>
+            <td><input type="text" placeholder="이름을 입력하세요"></td>
+        </tr>
+        <tr>
+            <td>연락처</td>
+            <td>
+              <select name="tel">
+                <option>010</option>
+                <option>011</option>
+                <option>016</option>
+                <option>017</option>
+                <option>019</option>
+              </select>
+              <input type="text" maxlength="4" name="tel2">
+              <input type="text" maxlength="4" name="tel3">
+            </td> <!--select와 input박스를 한 td안에 넣으면 길이감이 해결된다. -->
+        </tr>
+        <tr>
+          <td>이메일</td>
+          <td>
+              <input type="text" placeholder="이메일 주소를 선택하세요">@   <!-- 바로 옆에 @ 를 붙이면 길이감이 해결됨-->
+              <select name="email">
+                <option>naver.com</option>
+                <option>gmail.com</option>
+                <option>daum.net</option>
+                <option>nate.com</option>
+                <option>직접입력</option> <!--직접입력이 되는 인풋창이 필요하다. 순수html에서는 못만들고 자바로 기능을 넣는다.-->
+             </select>
+          </td> <!--위와 동일하게 한 <td>박스에 내용을 넣는다.-->
+        </tr>
+        <tr>
+            <td colspan="2">메일링 서비스 동의
+              <label><input type="checkbox">동의</label>
+            </td>
+        </tr>
+        <tr>
+            <td>약관 동의</td>
+            <td><input type="radio" name="agree" id="yes">
+                <label for="yes">예</label>
+                <input type="radio" name="agree" id="no" checked> 
+                <label for="no">아니오</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="submit">회원가입</button>
+                <button type="reset">초기화</button>  <!--type="reset" : 초기화 기능, form 태그 안에 있어야 작동한다-->
+                <button type="button">취소</button>
+            </td>
+        </tr>
+    </tbody>
+    </table>
+</form>
+</body>
+</html>

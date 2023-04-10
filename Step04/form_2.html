@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼태그</title>
+</head>
+<body>
+    <form action="">
+        <!-- 
+            체크박스, 라디오 버튼 
+                그룹화 : name 속성 값이 다르면 다른 종류의 값으로 인식
+                        라디오 버튼 경우 예 아니오를 둘다 선택된 상태
+                checked 속성 : 체크박스, 라디오 버튼의 기본값을 설정
+        -->
+        <input type="checkbox" name="hobby" value="game" id="game"> 
+        <label for="game">게임</label> <!-- '게임' 텍스트를 눌러도 체크박스가 선택되도록 하는것-->
+        <input type="checkbox" name="hobby" value="movie" id="movie"> 
+        <label for="movie">영화</label> <br> <!--label : 연결된 input 태그를 선택해주는 효과-->
+
+        가입 약관 동의 여부 : 
+        <input type="radio" name="agree" value="yes" id="yes">
+        <label for="yes">예</label>
+        <input type="radio" name="agree" value="no" id="no" checked> <!--checked를 하면 기본적으로 아니오에 선택이 미리 되어있다.-->
+        <label for="no">아니오</label>
+        <!-- name값을 똑같이 해주지 않으면 예 아니오가 둘다 체크되어버린다. 서로 별도의 값으로 인식된다 -->
+        <hr>
+
+        날짜 : <input type="date"><br>
+        첨부파일 : <input type="file"><br>
+        색상 선택 : <input type="color" name="color"><br>
+        슬라이더 : <input type="range" name="range" value="100"><br>
+        수량 선택 : <input type="number" value="1" max="30" min="0" step="3"><br>
+        <!-- 
+            textarea : input태그이지만 여러줄 입력받도록 하는 것
+            input 태그에 텍스트 상자에 쓰던 속성을 전부 사용이 가능  
+            cols : 컬럼 개수(글자 개수), rows : 행 개수 -> 입력창 크기 조정, 하지만 요즘은 CSS width height로 조정
+        -->
+        <textarea cols="30" rows="10"></textarea> <br>
+
+        <!-- select -->
+        <select name="tel">
+            <!-- 
+                value 는 실제로 서버에 전송될 데이터(값을 입력시 주소창에 뜨는 데이터를 말함)
+                option 태그에 텍스트가 화면에 보여지는 내용
+                option 태그의 value 속성을 생략하면 option 태그의 내용이 전송(value="3"을 지우면 016이 그대로 서버에 전송됨)
+             -->
+            <option value="1">010</option>
+            <option value="2">011</option>
+            <option>016</option>
+            <option value="4">017</option>
+            <option value="5">019</option>
+        </select>
+        <br>
+        <!-- submit 버튼 (아무것도 안넣으면)-->
+        <button>제출</button>
+    </form>
+</body>
+</html>

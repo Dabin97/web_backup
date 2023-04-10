@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 태그</title>
+</head>
+<body>
+    <!-- 폼 태그 : 사용자로부터 직접적으로 데이터를 입력받아서 서버로 데이터를 전송해주는 태그 -->
+    <!--http://127.0.0.1:5500/Step03/form_1.html?id=A1111&passwd=2222
+        action : 데이터를 전송할 서버페이지 경로    
+        method : 데이터 전송 방식
+           get : url에 데이터를 전송(데이터전송량에 한계 O)
+          post : http 메세지의 body에 포함해서 데이터를 전송(url에 보이지않는다)(데이터전송량에 한계 X)
+        사용자로부터 입력받는 태그 : input
+            입력받는 종류를 type 속성으로 결정
+    -->
+    <form action="" method="get">           <!--method="get"이 기본 설정-->
+       <!-- playceholder : 입력할 내용의 힌트, 입력하면 힌트는 사라짐
+            required : 반드시 입력해야하는 필수 입력 항목
+            maxlength : 최대 입력 가능한 글자 수
+            minlength : 최소 입력 가능한 글자 수
+            value : input 태그에 미리 입력할 내용, 기본값
+            autofocus : 페이지가 로딩되면 자동으로 포커스가 이동(커서가 인풋박스에서 깜빡거림)
+            disabled : 해당 input 태그를 비활성화, 서버로도 전송 X
+            readyonly : 해당 input 태그를 읽기 전용으로 설정, 서버로 전송 O
+        -->
+        <input type="text" name="id" placeholder="아이디 입력" required maxlength="20" minlength="5" autofocus><br>
+        <input type="password" name="passwd"><br>
+        <input type="text" name="name" value="홍길동" readonly><br>
+        <!-- <input type="submit" value="로그인"> 서버로 제출해주는 버튼 : submit -->
+        <button type="submit">로그인</button>
+        
+        
+    </form>
+
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나머지 태그</title>
+</head>
+<body>
+    <!-- 기본값 범위 0~1 -->
+    <progress value="0.7"></progress>
+    <progress value="80" max="100"></progress> <!--진행상황을 알려주는것이기 때문에 최소값은 0으로 항상 고정-->
+
+    <figure>
+        <figcaption>이미지 그룹 제목</figcaption>
+        <img src="/Step02/img/cloud_sun.png" alt="">
+        <img src="/Step02/img/cloud_sun.png" alt="">
+        <img src="/Step02/img/cloud_sun.png" alt="">
+        <img src="/Step02/img/cloud_sun.png" alt="">
+    </figure>
+    <hr>
+    <figure>
+        <img src="/Step02/img/cloud_sun.png" alt="">
+        <img src="/Step02/img/cloud_sun.png" alt="">
+        <img src="/Step02/img/cloud_sun.png" alt="">
+        <img src="/Step02/img/cloud_sun.png" alt="">
+        <figcaption>이미지 그룹 제목</figcaption> <!--제목이 아래로-->
+    </figure>
+    <hr>
+
+    <blockquote cite="인용한 url 주소"> 
+        의원을 제명하려면 국회재적의원 3분의 2 이상의 찬성이 있어야 한다. <br>
+        <mark>재산권의 행사는</mark> 공공복리에 적합하도록 하여야 한다. <br>  <!--<mark> 태그 : 형광펜-->
+        헌법재판소의 장은 국회의 동의를 얻어 재판관중에서 대통령이 임명한다. 
+    </blockquote>
+
+    <dl>
+        <dt>제목</dt>
+        <dd>내용1</dd> <!--tab 띄어짐-->
+        <dt>제목</dt>
+        <dd>내용1</dd>
+        <dt>제목</dt>
+        <dd>내용1</dd>
+    </dl>
+
+    <pre> <!--타이핑한걸 그대로 내보낼수있다. 띄어쓰기도 -->
+        의원을 제명하려면 국회재적의원             3분의 2 이상의 찬성이 있어야 한다. <br> 
+        <mark>재산권의 행사는</mark> 공공복리에 적합하도록 하여야 한다. <br>  
+        헌법재판소의 장은 국회의 동의를 얻어 재판관중에서 대통령이 임명한다.
+    </pre>
+
+</body>
+</html>

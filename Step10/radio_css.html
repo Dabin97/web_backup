@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>체크박스</title>
+    <style>
+    /* 체크박스(라디오버튼)가 체크된 상태 , #id로 지정해서 사용, +label--> 그 줄에 있는 label 태그에 적용, 커스텀된 체크박스를 만들때 사용*/
+
+    input{
+        display: none; /*라디오 숨기기*/
+    }
+    label{
+        background-image: url(/Step02/img/radio_none_check.png);
+        background-size: 16px;
+        background-repeat: no-repeat;
+        padding-left: 20px;
+        background-position: left center;
+    }
+    input:checked+label{
+        background-image: url(/Step02/img/radio_check.png);
+    }
+    </style>
+</head>
+<body>
+    <input type="radio" name="item" id="item1"><label for="item1"> 예</label>
+    <br>
+    <input type="radio" name="item" id="item2"><label for="item2"> 아니오</label>
+</body>
+</html>

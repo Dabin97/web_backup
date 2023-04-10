@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display</title>
+    <style>
+        ul{
+            list-style-type: none;
+            padding: 0px;
+            margin: 0 auto; /*가운데로 오게 하기, 이것만으로는 가운데로 오지않고 아래 2개가 있어야 가운데로 옴*/
+            width: 1220px;
+            text-align: center;
+        }
+        li{
+            border: 1px solid black;
+            width: 200px;
+            text-align: center;
+           /* display: inline; 메뉴 형식으로 만들기 위해 block -> inline 변환 (inline은 글자취급하기때문에 width를 줘도 늘어나지않는다)*/
+           display: inline-block; /*영역도 잡을수있고, 글자로도 취급가능. 다만 정렬에 관계된건 불가능(margin, padding)*/
+
+        }
+        /* li는 블록이다. 실행된 후 자동으로 줄바꿈 되기 때문 */
+        .img{
+           /* visibility: hidden; 안보이게 숨김, 그래도 잡힌 영역을 없애지않고 그대로 둔다.*/
+           display: none; /*hidden과 다르게 잡힌 영역도 없앰*/
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#" class="menu_a">항목1</a></li>
+        <li><a href="#" class="menu_a">항목2</a></li>
+        <li><a href="#" class="menu_a">항목3</a></li>
+        <li><a href="#" class="menu_a">항목4</a></li>
+        <li><a href="#" class="menu_a">항목5</a></li>
+    </ul>
+    <hr>
+    <h2>display : none, visiblity : hidden 차이</h2>
+    <img src="/Step02/img/tree.jpg" class="img">
+    <img src="/Step02/img/tree.jpg">
+</body>
+</html>

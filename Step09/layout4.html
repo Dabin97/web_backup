@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            width: 1200px;
+            background-color: rgb(209, 209, 209);
+            padding: 20px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+        .header_container{
+            width: 1200px;
+            display: inline-block;
+        }
+        .main_logo{
+            width: 200px;
+            float: left;
+        }
+        button,input{
+            float: right;
+            height: 40px;
+            box-sizing: border-box;
+            margin-top: calc(55px/2);
+        }
+        button{
+            width: 70px;
+            margin-right: 50px;
+        }
+        input{
+            width: 200px;
+        }
+
+        nav{
+            background-color: rgb(186, 214, 236);
+            width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        ul{
+            list-style-type: none;
+            display: inline-block;
+            font-size: 0;
+
+        }
+        li{
+            float: left;
+        }
+        a{
+            display: inline-block;
+            width: 200px;   
+            padding: 20px 0;
+            font-size: 20px;
+            font-weight: bold;
+            color: black;
+            text-decoration: none;
+        }
+        
+        .main_container{
+            width: 1200px; 
+            margin: 0 auto;
+        }
+        aside{
+            width: 150px;
+            float: left;
+            margin-top: 20px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        section{
+            width: 900px;
+            float: left;
+        }
+        .sub_banner1{
+            width: 100%;
+            height: 400px;
+        }
+        .sub_banner2{
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        article{
+            padding-top: 20px;
+            margin-bottom: 30px;
+            overflow: scroll;
+        }
+        figure{
+            width: 1200px; /*아예 길이를 늘려놓고 article에 overflow: scroll; 속성을 넣는다.*/
+        }
+        .thumnail{
+            width: 200px;
+            margin-right: 10px;
+            float: left;
+            text-align: center;
+        }
+        .thumnai_img{
+            width: 100%;
+            height: 100px;
+        }
+
+        footer{
+            width: 1200px;
+            margin: 0 auto;
+            padding:20px 50px;
+            clear: both; 
+            background-color: rgb(233, 118, 77);
+            box-sizing: border-box;
+        }
+        .footer_container{    
+            width: 100%;
+            display: inline-block;
+        }
+
+        .footer_p{
+            float: left;
+            margin-right: 200px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header_container">
+           <img src="/Step02/img/logo.png" class="main_logo">
+           <button>검색</button>
+           <input type="text" placeholder="검색어를 입력하세요">
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">메뉴1</a></li>
+            <li><a href="#">메뉴2</a></li>
+            <li><a href="#">메뉴3</a></li>
+            <li><a href="#">메뉴4</a></li>
+            <li><a href="#">메뉴5</a></li>
+        </ul>
+    </nav>
+        <div class="main_container">
+            <aside><img src="/Step02/img/tree.jpg" class="sub_banner1"></aside>
+            <section>
+                <article>
+                    <h2>article 제목</h2>
+                    <figure>
+                        <div class="thumnail">
+                            <div>
+                                <img src="/Step02/img/tree.jpg" class="thumnai_img">
+                                <p>내용</p>
+                            </div>
+                        </div>
+                        <div class="thumnail">
+                            <div>
+                                <img src="/Step02/img/tree.jpg" class="thumnai_img">
+                                <p>내용</p>
+                            </div>
+                        </div>
+                        <div class="thumnail">
+                            <div>
+                                <img src="/Step02/img/tree.jpg" class="thumnai_img">
+                                <p>내용</p>
+                            </div>
+                        </div>
+                        <div class="thumnail">
+                            <div>
+                                <img src="/Step02/img/tree.jpg" class="thumnai_img">
+                                <p>내용</p>
+                            </div>
+                        </div>
+                        <div class="thumnail">
+                            <div>
+                                <img src="/Step02/img/tree.jpg" class="thumnai_img">
+                                <p>내용</p>
+                            </div>
+                        </div>
+                    </figure>
+                </article>
+                <article>
+                    <h2>article 제목</h2>
+                    <figure>
+                        <div class="thumnail">
+                            <div>
+                                <img src="/Step02/img/tree.jpg" class="thumnai_img">
+                                <p>내용</p>
+                            </div>
+                        </div>
+                        <div class="thumnail">
+                            <div>
+                                <img src="/Step02/img/tree.jpg" class="thumnai_img">
+                                <p>내용</p>
+                            </div>
+                        </div>
+                        <div class="thumnail">
+                            <div>
+                                <img src="/Step02/img/tree.jpg" class="thumnai_img">
+                                <p>내용</p>
+                            </div>
+                        </div>
+                        <div class="thumnail">
+                            <div>
+                                <img src="/Step02/img/tree.jpg" class="thumnai_img">
+                                <p>내용</p>
+                            </div>
+                        </div>
+                        <div class="thumnail">
+                            <div>
+                                <img src="/Step02/img/tree.jpg" class="thumnai_img">
+                                <p>내용</p>
+                            </div>
+                        </div>
+                    </figure>
+                </article>
+            </section>
+            <aside>
+                <img src="/Step02/img/tree.jpg" class="sub_banner2">
+                <img src="/Step02/img/tree.jpg" class="sub_banner2">
+                <img src="/Step02/img/tree.jpg" class="sub_banner2">
+                <img src="/Step02/img/tree.jpg" class="sub_banner2">
+            </aside>
+        </div>
+        <footer>
+            <div class="footer_container">
+                <p class="footer_p">
+                    회사명 : OOOOOOO<br>
+                    대표 : OOO<br>
+                    사업자번호 : OOO-OOO-OOOOO <br
+                    >통신판매업신고번호 : OOO-OOO-OOOOO
+                </p>
+                <p class="footer_p">
+                    고객센터 연락처 : <a href="tel:02-0000-0000" style="padding: 0;">OO-OOO-OOOO</a><br>
+                    담당자 이메일 : <a href="mailto:OOOOO@gmail.com" style="padding: 0;">OOOO@gmail.com</a>
+                    </p>
+            </div>
+        </footer>
+</body>
+</html>

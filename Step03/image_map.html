@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 맵</title>
+</head>
+<body>
+    <img src="/Step02/img/img_map.png" usemap="#m"> <!--#을 넣어줘야 작동한다.-->
+    <map name="m">
+        <!-- 사각형은 좌상단, 우하단 좌표값 -->
+        <area shape="rect" coords="12,17,152,54" href="https://www.youtube.com" target="_blank">
+        <area shape="rect" coords="396,36,515,59" href="https://www.facebook.com" target="_blank">
+        <!-- 원은 중심좌표, 반지름 -->
+        <area shape="circle" coords="262,99,65" href="https://www.kakao.com" target="_blank">
+        <area shape="circle" coords="79,147,64" href="https://www.naver.com" target="_blank">
+        <!-- 다각형은 좌표값1, 좌표값2... -->
+        <area shape="poly" coords="" href="https://www.twitter.com" target="_blank">
+         <!--다각형은 좌표값1,좌표값2....-->
+         <area shape="poly" coords="408,97,398,105,393,117,393,209,398,218,410,225,501,225,512,218,519,206,520,115,512,105,502,98" 
+         href="https://www.twitter.com" alt="">
+    </map>
+</body>
+</html>
+<!-- 좌측상단이 시작점 (0,0)이다. 오른쪽이 +1, 왼쪽이 -1 -->
+ <!--poly : 다각형, 자유형 shape-->
